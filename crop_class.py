@@ -39,7 +39,7 @@ class Crop:
         if light >= self._light_need and water >= self._water_need:
             self._growth += self._growth_rate
         self._days_growing += 1
-        self.update_status()
+        self._update_status()
 
 def auto_grow(crop, days):
     #grow the crop

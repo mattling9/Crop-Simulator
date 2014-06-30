@@ -9,12 +9,12 @@ class Wheat(Crop):
         self._type = "Wheat"
     def grow(self,light,water):
         if light >=self._light_need and water >= self._water_need:
-            if self._status == "seedling" and water >= self._water_needed:
-                growth = growth + growth_rate *1.5
-            elif self._status == "Young" and water >= self._water_needed:
-                growth = growth + growth_rate *1.25
+            if self._status == "seedling" and water >= self._water_need:
+                self._growth = self._growth + growth_rate *1.5
+            elif self._status == "Young" and water >= self._water_need:
+                self._growth = self._growth + growth_rate *1.25
             elif self._status == 'Old':
-                self._growth = growth + growth_rate /2
+                self._growth = self._growth + growth_rate /2
             else:
                 self._growth += self._growth_rate
                 self._days_growing += 1
